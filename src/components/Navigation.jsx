@@ -9,10 +9,10 @@ const Navigation = () => {
             
             {/* navigation links */}
             <ul>
-                <li href="#">Menu</li>
-                <li href="#">About</li>
-                <li href="#">Sources</li>
-                <li href="#">Contact</li>
+                <li href="#menu">Menu</li>
+                <li href="#about">About</li>
+                <li href="#sources">Sources</li>
+                <li href="#contact">Contact</li>
             </ul>
 
             {/* login button */}
