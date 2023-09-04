@@ -35,6 +35,11 @@ body {
     background: linear-gradient(to left, var(--body-background-linear-gradient-two), var(--body-background-linear-gradient-one));
 }
 
+.container {
+    width: 100%;
+    height: fit-content;
+}
+
 button {
     all: unset;
     margin: 0.4rem;
