@@ -2,37 +2,55 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
+    font-weight: 100;
+    font-family: Helvetica, 'Times New Roman', serif;
 
 }
 
 :root {
-    --button-background: rgb(234, 129, 234);
-    --button-text: black;
+
+    --main-one: #ffaa00;
+    --main-two: #000000;
+
+    --transparent: #00000000;
+
     --nav-border-bottom: black;
+
+    --height-navigation-bar: 80px;
+
+    --hero-button-color: #ffaa00;
+    --hero-button-background: black;
+
+
+    --body-background-linear-gradient-one: #ffaa00;
+    --body-background-linear-gradient-two: black;
 }
 
 html {
     scroll-behavior: smooth;
 }
+
 body {
-    font-family: Helvetica, 'Times New Roman', serif;
+    background: linear-gradient(to left, var(--body-background-linear-gradient-two), var(--body-background-linear-gradient-one));
 }
+
 button {
     all: unset;
     margin: 0.4rem;
     padding: 0.4rem;
-    border-radius: 10%;
-    color: var(--button-text);
-    background: var(--button-background);
+    color: var(--main-one);
+    background: var(--transparent);
     height: fit-content;
 }
 
 nav {
+    font-size: 1.4rem;
     display: flex;
     justify-content: space-evenly;
     width: 100%;
     margin: 0.4rem auto;
-    height: 80px;
+    height: var(--height-navigation-bar);
     align-items: center;
     border-bottom: 2px solid var(--nav-border-bottom);
 }
@@ -55,4 +73,59 @@ nav ul li {
     margin: 0.4rem;
     padding: 0.4rem;
     height: fit-content;
+}
+nav ul li:nth-child(3), li:nth-child(4){
+    color: var(--main-one);
+}
+
+.hero {
+    margin: 0.4rem;
+    padding: 0.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: calc(100vh - var(--height-navigation-bar));
+}
+.hero h1 {
+    margin: 0.4rem;
+    margin-bottom: 1.4rem;
+    padding: 0.4rem;
+    width: 70vh;
+    font-size: 4rem;
+    font-weight: 400;
+    line-height: 4rem;
+}
+.hero p {
+    margin: 0.4rem;
+    padding: 0.4rem;
+    width: 70vh;
+    font-size: 1.4rem;
+    line-height: 2rem;
+
+}
+.heroButton {
+    margin: 1.4rem 0 1.4rem 0.4rem;
+    display: flex;
+    gap: 2rem;
+    width: fit-content;
+    height: fit-content;
+}
+.heroButton button {
+    color: var(--hero-button-color);
+    background: var(--hero-button-background);
+}
+.heroImage img {
+    margin: 0.4rem;
+    padding: 0.4rem;
+    height: calc(70vh - var(--height-navigation-bar));
+    width: auto;
+}
+.shopNow p {
+    font-size: 0.8rem;
+    margin: 0.4rem 0.4rem -1rem 0.4rem;
+}
+.shopNowLogos img {
+    margin: 0.7rem;
+    width: 10vh;
+    border: 1px solid var(--nav-border-bottom);
 }
